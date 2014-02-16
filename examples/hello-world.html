@@ -9,6 +9,7 @@
   <div id="content" ng-app="HelloWorldApp">
     <div ng-controller="GreetingController">
       <h1 ng-bind="greeting"></h1>
+      <h3 ng-bind="taunt"></h3>
       <form ng-submit="greet(name)">
         <input type="text" placeholder="State your name" ng-model="name">
       </form>
