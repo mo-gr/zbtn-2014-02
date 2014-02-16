@@ -11,3 +11,15 @@ footer {
     font-family: "Montserrat", Impact, sans-serif;
     font-weight: light;
     opacity: .8; }
+
+.absolute {
+  position: absolute; }
+
+.nearTop {
+  top: 20%; }
+
+.left {
+  left: 0; }
+
+.right {
+  right: 0; }

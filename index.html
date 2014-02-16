@@ -315,11 +315,88 @@ if (elem.addEventListener) {
     </section>
 
     <section>
-      <section>
-        <img src="img/AngularJS-large.png" alt="AngularJS Logo">
+      <section >
+        <img src="img/AngularJS-large.png" alt="AngularJS Logo" style="background: white;">
       </section>
       <section>
-        <h1>TODO: Move angular slides here</h1>
+        <h3>AngularJS</h3>
+        <p>Superheroic JavaScript MVW Framework</p>
+        <p>innovative approaches to web dev</p>
+        <p>hopefully convinces you about MVC instead of manually weaving events</p>
+      </section>
+      <section>
+        <h3>Some facts</h3>
+        <p>Open Source (MIT), developed at Google</p>
+        <p>first release 2009</p>
+        <p>currently 1.2.13</p>
+        <p>~99kB minified</p>
+      </section>
+      <section>
+        <h3 style="height: 800px">over 400 contributors</h3>
+        <div class="absolute left nearTop">
+          <p>Igor Minar</p>
+          <img src="img/minar.jpeg" alt="Igor Minar"/>
+        </div>
+        <div class="absolute right nearTop">
+          <p>Miško Hevery</p>
+          <img src="img/hevery.jpeg" alt="Miško Hevery" />
+        </div>
+      </section>
+      <section>
+        <h3>AngularJS' main features</h3>
+        <ul>
+          <li>2-way data binding</li>
+          <li>templating</li>
+          <li>modularity</li>
+          <li>testability</li>
+          <li>dependency injection</li>
+        </ul>
+      </section>
+      <section>
+        <h3>AngularJS' focus</h3>
+        <ul>
+          <li>client only</li>
+          <li>no UI components</li>
+          <li>provide structure and framework</li>
+          <li>provide common functionality (templating, AJAX, form handling etc)</li>
+          <li>be extensible and modular</li>
+        </ul>
+      </section>
+      <section>
+        <h3>MVC in AngularJS</h3>
+        <ul>
+          <li>Model: regular JS objects</li>
+          <li>View: HTML++ (templates + directives)</li>
+          <li>Controller: glue between M &amp; Services</li>
+          <li>Services: place for business logic, AJAX and so on</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Directives</h3>
+        <p>flexible extensions to HTML</p>
+        <p>attributes, tags, classes and comments</p>
+        <p>DOM interactions should (usually) all be directives</p>
+      </section>
+
+      <section>
+        <h3>enough talk, show me code!</h3>
+      </section>
+
+      <section>
+        <h3>important concepts</h3>
+        <ul>
+          <li>model, view &amp; controller</li>
+          <li>scope</li>
+          <li>directives</li>
+          <li>service</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AngularJS and jQuery?</h3>
+        <p>AngularJS uses jQuery if it is available</p>
+        <p>falls back to jQLite otherwise</p>
+        <p>common recommendation: start w/o jQuery to avoid falling back into old habbits</p>
       </section>
     </section>
 
@@ -392,6 +469,7 @@ if (elem.addEventListener) {
       <section>
         <h3>Web Assembler?</h3>
         <p>JavaScript Engines are already very fast</p>
+        <p>JavaScript is now an LLVM target</p>
         <p>asm.js - highly optimizable subset of JS</p>
         <p>intended as a compilation target</p>
       </section>
