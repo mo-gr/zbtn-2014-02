@@ -1,1 +1,1 @@
-/* global angular:false */(function(){"use strict";var e=angular.module("HelloWorldApp",[]);e.controller("GreetingController",function(e){e.greeting="Welcome";e.greet=function(t){e.greeting="Hello, "+t}})})();
+/* global angular:false */(function(){"use strict";var e=angular.module("HelloWorldApp",[]);e.controller("GreetingController",function(e,t){e.greeting="Welcome";e.greet=function(n){e.greeting=t.greet(n)}});e.service("GreetingService",function(){return{greet:function(e){return e?"Hello, "+e:"State your name!"}}})})();
