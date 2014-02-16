@@ -1,1 +1,1 @@
-/* global angular:false */(function(){"use strict";})();
+/* global angular:false */(function(){"use strict";var e=angular.module("HelloWorldApp",[]);e.controller("GreetingController",function(e){e.greeting="Welcome";e.greet=function(t){e.greeting="Hello, "+t}})})();
