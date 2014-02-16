@@ -1,389 +1,506 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+<title>Past, present and future of JavaScript</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+<meta name="description" content="Past, present and future of JavaScript">
+<meta name="author" content="Moritz Grauel">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/night.css" id="theme">
+<link rel="stylesheet" href="css/zbtn.css" >
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+</head>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+<body>
 
-	<body>
+<div class="reveal">
 
-		<div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section id="title">
+      <h1>Past, present and future of JavaScript</h1>
+      <h3>Moritz Grauel</h3>
+    </section>
+    <section id="intro">
+      <section>
+        <h1>Moritz Grauel</h1>
+        <p>Berlin native. Bit herder. Code connoisseur. Coffee lover.</p>
+        <p><a href="http://twitter.com/mo_gr">@mo_gr</a></p>
+        <p><a href="mailto:mo@notadomain.com">mo@notadomain.com</a></p>
+        <p><a href="http://moritz.grauel.is/awesome">http://moritz.grauel.is/awesome</a></p>
+      </section>
+      <section>
+        <h2>Freelance Software Developer and Trainer</h2>
+        <p>software professional &gt; 7 years</p>
+        <p>JVM based web applications</p>
+        <p>strong frontend focus</p>
+        <p>some iOS</p>
+      </section>
+    </section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+    <section id="past">
+      <section>
+        <h3>a little bit of history</h3>
+      </section>
+      <section>
+        <p>the year was 1995</p>
+        <p>browser wars between Microsoft and Netscape</p>
+      </section>
+      <section>
+        <h3>Brendan Eich</h3>
+        <p>tasked to create a scripting language for Netscape Navigator</p>
+        <p>strong influence by scheme and self</p>
+        <p>promising project</p>
+      </section>
+      <section>
+        <h3>middle management</h3>
+        <p class="fade-in fragment">forced Java-like Syntax</p>
+        <p class="fade-in fragment">forced confusing Java name</p>
+        <p class="fade-in fragment">extreme time pressure</p>
+      </section>
+      <section>
+        <p>browser wars → copy wars</p>
+        <p>IE copied JavaScript within 1 year</p>
+        <p>JScript</p>
+      </section>
+      <section>
+        <h3>IE 11 user agent string</h3>
+        <pre><code>Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko</code></pre>
+      </section>
+      <section>
+        <h3>Standards</h3>
+        <p>in 1997 JavaScript became ECMA Script</p>
+        <p>adopted by all browser manufacturers</p>
+        <p>consistend behaviour in browsers</p>
+        <p class="fade-in fragment">does not directly cover the DOM API</p>
+      </section>
+      <section>
+        <h3>DOM API</h3>
+        <p>source of pain in old browsers</p>
+        <p>very different interpretation</p>
+        <p>inconsistent API</p>
+        <p>wrong implementations</p>
+        <p class="fade-in fragment">...more on that later</p>
+      </section>
+      <section>
+        <h3>Douglas Crockford</h3>
+        <p>most famous for JSON</p>
+        <p>2008: released a book</p>
+      </section>
+      <section>
+        <h3>JavaScript: The good parts</h3>
+        <img src="img/javascript-the-good-parts-the-definitive-guide.jpg" alt="JavaScript: The Good Parts">
+      </section>
+    </section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+    <section id="dom">
+      <section>
+        <h3>JavaScripts intended purpose</h3>
+        <p>simple DOM manipulations</p>
+        <p>reacting to user input</p>
+        <p>simple glue code</p>
+      </section>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+      <section>
+        <h3>Cross Browser</h3>
+        <p>getting it to work consistent in Mozilla and IE was a pain</p>
+      </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+      <section>
+        <h3>...but</h3>
+        <p>scripts were simple</p>
+        <p>all was good</p>
+        <p>until...</p>
+      </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+      <section>
+        <h3>AJAX</h3>
+        <p class="fade-in fragment">introduced around 2000</p>
+        <p class="fade-in fragment">by Microsoft for Outlook Web Access</p>
+        <p class="fade-in fragment"><code>XMLHttpRequest</code> standardized by W3C in 2006</p>
+      </section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+      <section>
+        <h3>People started building more and more complex things in JavaScript</h3>
+      </section>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+      <section>
+        <pre><code>
+// attaching an eventlistener
+if (elem.addEventListener) {
+    elem.addEventListener(event, callbackFn, false);
+} else {
+    elem.attachEvent("on" + event, callbackFn);
+}</code></pre>
+      </section>
+      <section>
+        <h3>Library spring</h3>
+        <p>libraries to abstract cross browser quirks away popped up everywhere</p>
+        <p>They usually provided uniform event handling, AJAX facilities and some basic animation support</p>
+        <p>jQuery, Mootools, YUI, Scriptaculous, Prototype and many more</p>
+      </section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+      <section>
+        <h3>jQuery</h3>
+        <p>most successfull</p>
+        <p>initial release 2006</p>
+        <ul>
+          <li>browser quirks</li>
+          <li>DOM manipulation</li>
+          <li>event handling</li>
+          <li>AJAX calls</li>
+          <li>animations</li>
+        </ul>
+        <p class="fade-in fragment">taught a lot of devs about CSS selectors</p>
+      </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+      <section>
+        <h3>hand crafted</h3>
+        <p>very imperative approach</p>
+        <p>no architectural support</p>
+      </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+      <section>
+        <h3>Common approach</h3>
+        <p>manually attach event handlers</p>
+        <p>manually mangle DOM with AJAX results</p>
+        <p>spaghetti-callback code</p>
+      </section>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
+      <section>
+        <pre><code>
+  $('#actionButton').on('click', function() {
+    var data = collectAndValidateUserInput();
+    $.ajax(
+      type: 'POST',
+      data: data,
+      success: function(response) {
+        $('#outputArea').html(prepareOutputFromResponse(response));
       }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+    );
+  });
+        </code></pre>
+      </section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+      <section>
+        <h3>Is this good code?</h3>
+        <p class="fragment fade-in">How do you test this?</p>
+        <p class="fargment fade-in">Seperation of concerns?</p>
+        <p class="fragment fade-in">Reuse?</p>
+      </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+      <section>
+        <h3>This style is not inherently bad</h3>
+        <p>widely in use</p>
+        <p>sucessfull</p>
+        <p>requires discipline</p>
+      </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+    </section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+    <section>
+      <section>
+        <h3>Is this the only way to write JavaScript applications?</h3>
+      </section>
+      <section>
+        <h3>There are worse ways</h3>
+      </section>
+      <section>
+        <h3>Abstracting it all away</h3>
+        <p>GWT, JSF et. al.</p>
+        <p>very leaky abstractions</p>
+        <p>usually crappy UI/UX</p>
+        <p>too little control</p>
+      </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+      <section>
+        <h3>There are better ways</h3>
+      </section>
+      <section>
+        <h3>embrace it and stop hacking around</h3>
+        <p>treat it as a first class citizen of your technology stack</p>
+        <p>apply some architecture and software engineering best practices</p>
+      </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+    </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+    <section>
+      <section>
+        <h3>JavaScript today</h3>
+      </section>
+      <section>
+        <h3>JavaScript engines</h3>
+        <p>no more compatibility problems</p>
+        <p>very fast</p>
+        <p>highly sophisticated</p>
+      </section>
+      <section>
+        <h3>node.js</h3>
+        <p>Chromes engine V8 w/o the Browser</p>
+        <p>released 2009</p>
+        <p>foundation for many great tools</p>
+      </section>
+      <section>
+        <h3>we are not creating interactive web sites anymore</h3>
+      </section>
+      <section>
+        <h3>we create graphical user interfaces for distributed applications</h3>
+      </section>
+      <section>
+        <h3>creating GUIs is not a new thing</h3>
+      </section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+      <section>
+        <h3>Common Approach</h3>
+        <p>some variation of Model-View-Controller</p>
+        <p>smalltalk did this in the 70ies</p>
+      </section>
 
-			</div>
+      <section>
+        <h3>Model-View-Whatever</h3>
+        <p>different MVC interpretations</p>
+        <p>Model View Controller</p>
+        <p>Model View View-Model</p>
+        <p>Model View Presenter</p>
+      </section>
 
-		</div>
+      <section>
+        <h3>MVC in JavaScript</h3>
+        <p>dozens of frameworks</p>
+        <p>similar situation to jQuery-like libraries a few years ago</p>
+        <p>a new one popping up every few minutes</p>
+      </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+      <section>
+        <h3>They usually provide</h3>
+        <ul>
+          <li>architectural structure</li>
+          <li>some form of components or modules</li>
+          <li>some form of server sync</li>
+          <li>a lot of the common glue code</li>
+          <li>far less imperative code</li>
+        </ul>
+      </section>
 
-		<script>
+      <section>
+        <h3><a href="http://todomvc.com">TodoMVC</a></h3>
+        <ul>
+          <li>good overview of popular frameworks</li>
+          <li>reference implementation of a todo app</li>
+          <li>great for comparison and to get started</li>
+        </ul>
+      </section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      <section>
+        <h3>The big ones</h3>
+        <ul>
+          <li>AngularJS</li>
+          <li>Backbone.js</li>
+          <li>Ember.js</li>
+          <li><em>[your personal favorite]</em></li>
+        </ul>
+      </section>
+    </section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    <section>
+      <section>
+        <img src="img/AngularJS-large.png" alt="AngularJS Logo">
+      </section>
+      <section>
+        <h1>TODO: Move angular slides here</h1>
+      </section>
+    </section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+    <section>
+      <section>
+        <h3>The Future?</h3>
+      </section>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+      <section>
+        <h3>Future of AngularJS</h3>
+      </section>
 
-		</script>
+      <section>
+        <h3>Near future</h3>
+        <p>Version 1.3 expected in a few weeks</p>
+        <p>drops IE8 support (and so should you)</p>
+        <p>removes deprecated features</p>
+      </section>
 
-	</body>
+      <section>
+        <h3>Long term</h3>
+        <p>AngularJS might be a bridge technology</p>
+        <p>Google is pushing hard in that direction</p>
+        <p>databinding → Object.observe</p>
+        <p>directives → WebComponents</p>
+        <p><a href="http://www.polymer-project.org">Polymer</a></p>
+        <p class="fragment fade-in">...looong way</p>
+        <p class="fragment fade-in">AngularDart</p>
+      </section>
+
+      <section>
+        <h3>Future of JavaScript</h3>
+      </section>
+
+      <section>
+        <h3>Compile to JS languages?</h3>
+      </section>
+
+      <section>
+        <h3>Two variants</h3>
+        <ol>
+          <li>custom runtime</li>
+          <li>language sugar</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Custom Runtime</h3>
+        <p>Dart, ClojureScript, etc.</p>
+        <p>real improvement</p>
+        <p>heavy (performance and learning curve)</p>
+      </section>
+      <section>
+        <h3>Language Sugar</h3>
+        <p>CoffeeScript, TypeScript, Sweet.js, etc.</p>
+        <p>can improve developer-happyness</p>
+        <p>usually minor improvements over JavaScript</p>
+        <p>require knowledge of JavaScript</p>
+      </section>
+      <section>
+        <h3>Compile to JS languages</h3>
+        <p>no silver bullet</p>
+        <p>user, where appropriate</p>
+        <p>won't replace JavaScript</p>
+        <p>source maps are finally here <span class="fragment fade-in">(except in IE)</span></p>
+      </section>
+
+      <section>
+        <h3>JavaScript.next?</h3>
+      </section>
+      <section>
+        <h3>Web Assembler?</h3>
+        <p>JavaScript Engines are already very fast</p>
+        <p>asm.js - highly optimizable subset of JS</p>
+        <p>intended as a compilation target</p>
+      </section>
+      <section>
+        <h3>JavaScript is here to stay</h3>
+        <p>don't expect a new language to show up</p>
+        <p>consense is highly unlikely</p>
+        <p>better get used to it</p>
+      </section>
+      <section>
+        <h3>Get used to it</h3>
+        <p>ECMA Script 6 (Harmony)</p>
+        <p>modules, real maps/sets, syntax cleanup</p>
+        <p>JavaScript might evolve into a nice language</p>
+        <p>beta feature in most browsers</p>
+      </section>
+      <section>
+        <h3>Browser situation</h3>
+        <p>a lot better</p>
+        <p>standardization and auto-updates</p>
+        <p>far less need for jQuery</p>
+      </section>
+    </section>
+
+    <section>
+      <h3>Questions?</h3>
+    </section>
+
+    <section>
+      <section>
+        <h3>One more thing...</h3>
+      </section>
+      <section>
+        <h3>React.js</h3>
+        <p>View technology (no M, no C)</p>
+        <p>developed at facebook</p>
+        <p>very interesting concepts</p>
+      </section>
+      <section>
+        <h3>Disclaimer</h3>
+        <p>I have nearly no experience in react.js</p>
+        <p>following might contain errors</p>
+        <p>don't confuse with react.js</p>
+      </section>
+      <section>
+        <h3>React.js in a nutshell</h3>
+        <p>always render the whole app</p>
+        <p>rendering based on current state</p>
+        <p>utilizes requestAnimationFrame</p>
+      </section>
+      <section>
+        <p>isn't rendering the whole app everytime slow?</p>
+      </section>
+      <section>
+        <h3>Virtual DOM</h3>
+        <p>render the whole app to a virtual DOM</p>
+        <p>diff the virtual DOM with previous frame</p>
+        <p>only apply necessary changes to real DOM</p>
+      </section>
+      <section>
+        <h3>Advantages</h3>
+        <p>updates to the model cause DOM change for free</p>
+        <p>clear architecture</p>
+        <p>virtual dom also works on the server</p>
+        <p>SPA can be delivered with initial DOM generated on server</p>
+      </section>
+      <section>
+        <h3>React.js</h3>
+        <p>might not be The Next Big Thing™</p>
+        <p>great concept, likely to become more mainstream in one form or another</p>
+        <p>different enough to be worth checking out</p>
+        <p>much love in Function Programming circles</p>
+      </section>
+    </section>
+
+  </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: false,
+progress: false,
+history: true,
+center: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+// Parallax scrolling
+// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+// parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+]
+});
+
+</script>
+
+</body>
 </html>
