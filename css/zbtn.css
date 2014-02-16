@@ -1,0 +1,13 @@
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  font-size: 12px; }
+  footer, footer a {
+    color: white;
+    text-decoration: none;
+    font-family: "Montserrat", Impact, sans-serif;
+    font-weight: light;
+    opacity: .8; }
