@@ -4,7 +4,7 @@ footer {
   width: 100%;
   text-align: center;
   z-index: 1000;
-  font-size: 12px; }
+  font-size: 10px; }
   footer, footer a {
     color: white;
     text-decoration: none;
@@ -23,3 +23,17 @@ footer {
 
 .right {
   right: 0; }
+
+.twothird {
+  box-sizing: border-box;
+  width: 60%; }
+
+.third {
+  box-sizing: border-box;
+  width: 30%; }
+
+.fleft {
+  float: left; }
+
+.fright {
+  float: right; }
