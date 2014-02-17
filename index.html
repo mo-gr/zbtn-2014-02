@@ -30,7 +30,7 @@
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
     <section id="title">
-      <h1>Past, present and future of JavaScript</h1>
+      <h1>Past, present and</h1><h1>future of JavaScript</h1>
       <h3>Moritz Grauel</h3>
     </section>
     <section id="intro">
@@ -51,6 +51,10 @@
     </section>
 
     <section id="past">
+      <section>
+        <h3>JavaScript</h3>
+      </section>
+      <section><img src="img/wtfperminute.jpg" alt="WTF/m"></section>
       <section>
         <h3>a little bit of history</h3>
       </section>
@@ -78,10 +82,10 @@
         <p>IE copied JavaScript within 1 year</p>
         <p>JScript</p>
       </section>
-      <section>
-        <h3>IE 11 user agent string</h3>
-        <pre><code>Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko</code></pre>
-      </section>
+      <!--<section>-->
+        <!--<h3>IE 11 user agent string</h3>-->
+        <!--<pre><code>Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko</code></pre>-->
+      <!--</section>-->
       <section>
         <h3>Standards</h3>
         <p>in 1997 JavaScript became ECMA Script</p>
@@ -151,6 +155,7 @@
       </section>
 
       <section>
+        <h3>even simple things are hard to do correct</h3>
         <pre><code>
 // attaching an eventlistener
 if (elem.addEventListener) {
@@ -178,6 +183,11 @@ if (elem.addEventListener) {
           <li>animations</li>
         </ul>
         <p class="fade-in fragment">taught a lot of devs about CSS selectors</p>
+      </section>
+
+      <section>
+        <h3>painless</h3>
+        <pre><code>$(elem).on('click', callbackFn);</code></pre>
       </section>
 
       <section>
@@ -333,10 +343,13 @@ if (elem.addEventListener) {
         <img src="img/AngularJS-large.png" alt="AngularJS Logo" style="background: white;">
       </section>
       <section>
+        <p>hopefully convinces you about MVC instead of manually weaving</p>
+        <p>events into applications</p>
+      </section>
+      <section>
         <h3>AngularJS</h3>
         <p>Superheroic JavaScript MVW Framework</p>
         <p>innovative approaches to web dev</p>
-        <p>hopefully convinces you about MVC instead of manually weaving events</p>
       </section>
       <section>
         <h3>Some facts</h3>
@@ -371,9 +384,9 @@ if (elem.addEventListener) {
         <ul>
           <li>client only</li>
           <li>no UI components</li>
+          <li>be extensible and modular</li>
           <li>provide structure and framework</li>
           <li>provide common functionality (templating, AJAX, form handling etc)</li>
-          <li>be extensible and modular</li>
         </ul>
       </section>
       <section><img src="img/feelings_about_angularjs_over_time.png" alt="angularjs learning curve"></section>
@@ -382,7 +395,7 @@ if (elem.addEventListener) {
         <ul>
           <li>Model: regular JS objects</li>
           <li>View: HTML++ (templates + directives)</li>
-          <li>Controller: glue between M &amp; Services</li>
+          <li>Controller: glue between V &amp; Services</li>
           <li>Services: place for business logic, AJAX and so on</li>
         </ul>
       </section>
@@ -442,9 +455,11 @@ if (elem.addEventListener) {
         <h3>Long term</h3>
         <p>AngularJS might be a bridge technology</p>
         <p>Google is pushing hard in that direction</p>
-        <p>databinding → Object.observe</p>
-        <p>directives → WebComponents</p>
-        <p><a href="http://www.polymer-project.org">Polymer</a></p>
+        <p class="fragment fade-in">databinding → Object.observe</p>
+        <p class="fragment fade-in">directives → WebComponents</p>
+        <p class="fragment fade-in"><a href="http://www.polymer-project.org">Polymer</a></p>
+        <p class="fragment fade-in">modularity → ECMA Script 6</p>
+        <p class="fragment fade-in">dependeny injection → simple library?</p>
         <p class="fragment fade-in">...looong way</p>
         <p class="fragment fade-in">AngularDart</p>
       </section>
@@ -486,14 +501,14 @@ if (elem.addEventListener) {
       </section>
 
       <section>
-        <h3>JavaScript.next?</h3>
-      </section>
-      <section>
         <h3>Web Assembler?</h3>
         <p>JavaScript Engines are already very fast</p>
         <p>JavaScript is now an LLVM target</p>
         <p>asm.js - highly optimizable subset of JS</p>
         <p>intended as a compilation target</p>
+      </section>
+      <section>
+        <h3>JavaScript.next?</h3>
       </section>
       <section>
         <h3>JavaScript is here to stay</h3>
@@ -504,15 +519,41 @@ if (elem.addEventListener) {
       <section>
         <h3>Get used to it</h3>
         <p>ECMA Script 6 (Harmony)</p>
-        <p>modules, real maps/sets, syntax cleanup</p>
-        <p>JavaScript might evolve into a nice language</p>
         <p>beta feature in most browsers</p>
+        <p>first real improvements in 5 years</p>
+        <p>modules, real maps/sets, syntax cleanup</p>
+      </section>
+      <section>
+        <h3>Harmony samples</h3>
+        <pre><code>
+        const FOO = 'foo';
+        let blockScoped = '\o/';
+        var [a, b] = [b, a];
+        for (i of aThing) { ... }
+        (aParam) => { return aParam * 2 }
+        </code></pre>
+        <p class="fade-in fragment">JavaScript might evolve into a nice language</p>
       </section>
       <section>
         <h3>Browser situation</h3>
         <p>a lot better</p>
         <p>standardization and auto-updates</p>
         <p>far less need for jQuery</p>
+        <p>even IE10 is a nice browser</p>
+      </section>
+
+      <section>
+        <h3>It's a great time to be a web developer</h3>
+      </section>
+
+    </section>
+
+    <section>
+      <section>
+        <h3>Summary</h3>
+        <p class="fragment fade-in">stop hating JS - it had a rough childhood</p>
+        <p class="fragment fade-in">treat the web page as a proper UI - use some Model-View-Whatever</p>
+        <p class="fragment fade-in">JS turns into a nice language - still unsatisfied? compile to it</p>
       </section>
     </section>
 
@@ -539,7 +580,7 @@ if (elem.addEventListener) {
       <section>
         <h3>React.js in a nutshell</h3>
         <p>always render the whole app</p>
-        <p>rendering based on current state</p>
+        <p>widgets render based on current state</p>
         <p>utilizes requestAnimationFrame</p>
       </section>
       <section>
@@ -557,6 +598,24 @@ if (elem.addEventListener) {
         <p>clear architecture</p>
         <p>virtual dom also works on the server</p>
         <p>SPA can be delivered with initial DOM generated on server</p>
+      </section>
+      <section>
+        <pre><code>var Timer = React.createClass({
+  getInitialState: function() {
+    return {secondsElapsed: 0};
+    },
+  tick: function() {
+    this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+  },
+  componentDidMount: function() {
+    this.interval = setInterval(this.tick, 1000);
+  },
+  render: function() {
+    return (
+      React.DOM.div(null, "Seconds Elapsed: ", this.state.secondsElapsed)
+    );
+  }
+});</code></pre>
       </section>
       <section>
         <h3>React.js</h3>
