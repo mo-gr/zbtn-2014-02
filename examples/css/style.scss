@@ -6,6 +6,19 @@ body {
   box-sizing: border-box;
 }
 
+.animated {
+  transition: 3s ease-in-out all;
+  opacity: 1;
+  font-size: 1em;
+}
+.ng-hide {
+  opacity: 0;
+  font-size: 0;
+}
+.animated.ng-hide-remove {
+  display:block!important;
+}
+
 #content {
   width: 960px;
   margin: 0 auto;

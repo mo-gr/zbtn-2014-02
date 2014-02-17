@@ -1,7 +1,7 @@
 /* global angular:false */
 (function () {
   'use strict';
-  var helloWorldApp = angular.module('HelloWorldApp', []);
+  var helloWorldApp = angular.module('HelloWorldApp', ['ngAnimate']);
 
   helloWorldApp.controller('GreetingController', function($scope, GreetingService, TauntService) {
     $scope.greeting = "Welcome";
