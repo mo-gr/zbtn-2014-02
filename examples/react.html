@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ReactJS Hello World</title>
+<link rel="stylesheet" href="css/style.css" media="all">
+</head>
+<body>
+<div id="content"></div>
+<script src="js/react-0.8.0.js"></script>
+<script type="text/javascript">
+var Timer = React.createClass({
+  getInitialState: function() {
+    return {secondsElapsed: 0};
+    },
+  tick: function() {
+    this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+  },
+  componentDidMount: function() {
+    this.interval = setInterval(this.tick, 1000);
+  },
+  render: function() {
+    return (
+      React.DOM.div(null, "Seconds Elapsed: ", this.state.secondsElapsed)
+    );
+  }
+});
+
+React.renderComponent(Timer(), window.content);
+</script>
+</body>
+</html>
